@@ -20,19 +20,8 @@
   <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
 
-  <script>
-    // App() is a render function; it needs to be fast because it re-renders a lot
-    const App = () => {
-      return React.createElement(
-        "div",
-        {},
-        React.createElement("h1", { id: "brand" }, "Adopt Me!")
-      );
-    };
-
-    // display onto the DOM
-    ReactDOM.render(React.createElement(App), document.getElementById("root"))
-  </script>
+  <!-- MUST on the bottom -->
+  <script src="./App.js"></script>
 </body>
 
 </html>

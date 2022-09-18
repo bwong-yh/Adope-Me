@@ -24781,8 +24781,11 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
 const Search = ()=>{
-    const location = "Seattle, WA";
+    _s();
+    const [location, setLocation] = (0, _react.useState)("");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "search-params",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
@@ -24795,37 +24798,39 @@ const Search = ()=>{
                             type: "text",
                             id: "location",
                             value: location,
+                            onChange: (e)=>setLocation(e.target.value),
                             placeholder: "Location"
                         }, void 0, false, {
                             fileName: "src/componenets/Search.js",
-                            lineNumber: 8,
+                            lineNumber: 11,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/componenets/Search.js",
-                    lineNumber: 6,
+                    lineNumber: 9,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                     children: "Submit"
                 }, void 0, false, {
                     fileName: "src/componenets/Search.js",
-                    lineNumber: 16,
+                    lineNumber: 20,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/componenets/Search.js",
-            lineNumber: 5,
+            lineNumber: 8,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/componenets/Search.js",
-        lineNumber: 4,
+        lineNumber: 7,
         columnNumber: 5
     }, undefined);
 };
+_s(Search, "JMkk70NnkYHwacJIVl+G29lh6iI=");
 _c = Search;
 exports.default = Search;
 var _c;
@@ -24836,6 +24841,6 @@ $RefreshReg$(_c, "Search");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","7Zeie","2kQhy"], "2kQhy", "parcelRequiref74e")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}]},["1xC6H","7Zeie","2kQhy"], "2kQhy", "parcelRequiref74e")
 
 //# sourceMappingURL=index.7271efb6.js.map

@@ -1,34 +1,17 @@
-import React from "react";
+import React, { StrictMode } from "react";
 import { render } from "react-dom";
+import Search from "./componenets/Search";
 
-const Pet = props => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, props.name),
-    React.createElement("h2", {}, props.animal),
-    React.createElement("h2", {}, props.breed),
-  ]);
-};
-
-// App() is a render function; it needs to be fast because it re-renders a lot
 const App = () => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", { id: "brand" }, "Adopt Me!"),
-    React.createElement(Pet, {
-      name: "Kelly",
-      animal: "Dog",
-      breed: "Labrador",
-    }),
-    React.createElement(Pet, {
-      name: "Garfield",
-      animal: "Cat",
-      breed: "Persian Tabby",
-    }),
-    React.createElement(Pet, {
-      name: "Hamtaro",
-      animal: "Hamster",
-      breed: "Golden Hamster",
-    }),
-  ]);
+  return (
+    // strict mode simply future-proof the app; makes it less issues when the next version of react comes out by restricting the app the use legacy features of soon to be deprecated features
+    <StrictMode>
+      <div>
+        <h1 id="brand">Adopt Me!</h1>
+        <Search />
+      </div>
+    </StrictMode>
+  );
 };
 
 // display onto the DOM

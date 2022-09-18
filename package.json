@@ -1,0 +1,24 @@
+{
+  "name": "adope-me",
+  "version": "1.0.0",
+  "description": "A follow along tutorial of the Complete Intro to React v7 with Brian Holt from Frontend Master.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bwong-yh/Adope-Me.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bwong-yh/Adope-Me/issues"
+  },
+  "homepage": "https://github.com/bwong-yh/Adope-Me#readme",
+  "devDependencies": {
+    "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0"
+  }
+}

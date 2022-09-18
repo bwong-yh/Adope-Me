@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import ThemeContext from "../ThemeContext";
 import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
+import Modal from "./Modal";
 
 // class component; cannot use hooks
 class Details extends Component {
@@ -14,7 +15,7 @@ class Details extends Component {
   // }
 
   // since class properties plugins are implement with babel, the code above can be written as
-  state = { loading: true };
+  state = { loading: true, showModal: false };
 
   // life-cycle methods
   // componentDidMount() runs as soon as first render is done
@@ -26,6 +27,8 @@ class Details extends Component {
 
     this.setState({ loading: false, ...data.pets[0] });
   }
+
+  toggleModal = () => this.setState({ showModal: !this.state.showModal });
 
   // must have a render function
   render() {
@@ -54,11 +57,25 @@ class Details extends Component {
               <button style={{ backgroundColor: theme }}>Adopt {name}</button>
             )}
           </ThemeContext.Consumer> */}
-          <button style={{ backgroundColor: this.props.theme }}>
+          <button
+            style={{ backgroundColor: this.props.theme }}
+            onClick={this.toggleModal}
+          >
             Adpot {name}
           </button>
 
           <p>{description}</p>
+          {this.state.showModal ? (
+            <Modal>
+              <div>
+                <h1>Would you like to adopt {name}?</h1>
+                <div className="buttons">
+                  <a href="https://bit.ly/pet-adopt">Yes</a>
+                  <button onClick={this.toggleModal}>No</button>
+                </div>
+              </div>
+            </Modal>
+          ) : null}
         </div>
       </div>
     );

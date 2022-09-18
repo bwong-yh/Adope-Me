@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { useParams } from "react-router-dom";
 import Carousel from "./Carousel";
+import ErrorBoundary from "./ErrorBoundary";
 
 // class component; cannot use hooks
 class Details extends Component {
@@ -31,6 +32,8 @@ class Details extends Component {
       return <h2>Loading ...</h2>;
     }
 
+    // throw new Error("You Crashed!");
+
     const { name, animal, breed, city, state, description, images } =
       this.state;
 
@@ -54,7 +57,11 @@ class Details extends Component {
 // only way to get params out of react router is to use useParam; and the only way to use it in class componenet is to wrap it in another component
 const WrappedDetails = () => {
   const params = useParams();
-  return <Details params={params} />;
+  return (
+    <ErrorBoundary>
+      <Details params={params} />;
+    </ErrorBoundary>
+  );
 };
 
 export default WrappedDetails;

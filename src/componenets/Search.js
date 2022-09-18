@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
+import useBreedList from "../hooks/useBreedList";
 import Pet from "./Pet";
 
-const ANIMALS = ["bird", "cat", "dog", "rabbit", "raptile"];
+const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 
 const Search = () => {
   const [location, setLocation] = useState("");
   const [animal, setAnimal] = useState("");
   const [breed, setBreed] = useState("");
-  const breeds = [];
-  const [pets, setPets] = useState("");
+  const [breeds] = useBreedList(animal);
+  const [pets, setPets] = useState([]);
 
   const requestPets = async () => {
     const res = await fetch(
@@ -52,7 +53,7 @@ const Search = () => {
             }}
           >
             {/* by default, empty option */}
-            <options />
+            <option></option>
             {ANIMALS.map(animal => (
               <option key={animal} value={animal}>
                 {animal}
@@ -67,14 +68,14 @@ const Search = () => {
             id="breed"
             value={breed}
             onChange={e => {
-              setBreed("");
+              setBreed(e.target.value);
             }}
             onBlur={e => {
-              setBreed("");
+              setBreed(e.target.value);
             }}
           >
             {/* by default, empty option */}
-            <options />
+            <option></option>
             {breeds.map(breed => (
               <option key={breed} value={breed}>
                 {breed}

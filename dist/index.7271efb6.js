@@ -2904,8 +2904,6 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactDom = require("react-dom");
-var _pet = require("./componenets/Pet");
-var _petDefault = parcelHelpers.interopDefault(_pet);
 var _search = require("./componenets/Search");
 var _searchDefault = parcelHelpers.interopDefault(_search);
 const App = ()=>{
@@ -2916,18 +2914,18 @@ const App = ()=>{
                 children: "Adopt Me!"
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 9,
+                lineNumber: 8,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 10,
+                lineNumber: 9,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 8,
+        lineNumber: 7,
         columnNumber: 5
     }, undefined);
 };
@@ -2942,7 +2940,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./componenets/Pet":"5G4YW","react/jsx-dev-runtime":"iTorj","./componenets/Search":"lWmfU"}],"21dqq":[function(require,module,exports) {
+},{"react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react/jsx-dev-runtime":"iTorj","./componenets/Search":"lWmfU"}],"21dqq":[function(require,module,exports) {
 "use strict";
 module.exports = require("./cjs/react.development.js");
 
@@ -23925,71 +23923,7 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"react-refresh/runtime":"786KC"}],"5G4YW":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0827 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0827.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-/* Everything can be written in jsx 
-
-import React from "react";
-
-const Pet = props => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, props.name),
-    React.createElement("h2", {}, props.animal),
-    React.createElement("h2", {}, props.breed),
-  ]);
-};
-
-*/ // jsx
-const Pet = (props)=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: props.name
-            }, void 0, false, {
-                fileName: "src/componenets/Pet.js",
-                lineNumber: 19,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: props.animal
-            }, void 0, false, {
-                fileName: "src/componenets/Pet.js",
-                lineNumber: 20,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: props.breed
-            }, void 0, false, {
-                fileName: "src/componenets/Pet.js",
-                lineNumber: 21,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/componenets/Pet.js",
-        lineNumber: 18,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Pet;
-exports.default = Pet;
-var _c;
-$RefreshReg$(_c, "Pet");
-
-  $parcel$ReactRefreshHelpers$0827.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react-refresh/runtime":"786KC"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("./cjs/react-jsx-dev-runtime.development.js");
 
@@ -24782,6 +24716,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
+var _useBreedList = require("../hooks/useBreedList");
+var _useBreedListDefault = parcelHelpers.interopDefault(_useBreedList);
 var _pet = require("./Pet");
 var _petDefault = parcelHelpers.interopDefault(_pet);
 var _s = $RefreshSig$();
@@ -24790,15 +24726,15 @@ const ANIMALS = [
     "cat",
     "dog",
     "rabbit",
-    "raptile"
+    "reptile"
 ];
 const Search = ()=>{
     _s();
     const [location, setLocation] = (0, _react.useState)("");
     const [animal, setAnimal] = (0, _react.useState)("");
     const [breed, setBreed] = (0, _react.useState)("");
-    const breeds = [];
-    const [pets, setPets] = (0, _react.useState)("");
+    const [breeds] = (0, _useBreedListDefault.default)(animal);
+    const [pets, setPets] = (0, _react.useState)([]);
     const requestPets = async ()=>{
         const res = await fetch(`http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`);
         const data = await res.json();
@@ -24824,13 +24760,13 @@ const Search = ()=>{
                                 placeholder: "Location"
                             }, void 0, false, {
                                 fileName: "src/componenets/Search.js",
-                                lineNumber: 31,
+                                lineNumber: 32,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/componenets/Search.js",
-                        lineNumber: 29,
+                        lineNumber: 30,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -24849,9 +24785,9 @@ const Search = ()=>{
                                     setBreed("");
                                 },
                                 children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("options", {}, void 0, false, {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {}, void 0, false, {
                                         fileName: "src/componenets/Search.js",
-                                        lineNumber: 55,
+                                        lineNumber: 56,
                                         columnNumber: 13
                                     }, undefined),
                                     ANIMALS.map((animal)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -24859,19 +24795,19 @@ const Search = ()=>{
                                             children: animal
                                         }, animal, false, {
                                             fileName: "src/componenets/Search.js",
-                                            lineNumber: 57,
+                                            lineNumber: 58,
                                             columnNumber: 15
                                         }, undefined))
                                 ]
                             }, void 0, true, {
                                 fileName: "src/componenets/Search.js",
-                                lineNumber: 42,
+                                lineNumber: 43,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/componenets/Search.js",
-                        lineNumber: 40,
+                        lineNumber: 41,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -24882,15 +24818,15 @@ const Search = ()=>{
                                 id: "breed",
                                 value: breed,
                                 onChange: (e)=>{
-                                    setBreed("");
+                                    setBreed(e.target.value);
                                 },
                                 onBlur: (e)=>{
-                                    setBreed("");
+                                    setBreed(e.target.value);
                                 },
                                 children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("options", {}, void 0, false, {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {}, void 0, false, {
                                         fileName: "src/componenets/Search.js",
-                                        lineNumber: 77,
+                                        lineNumber: 78,
                                         columnNumber: 13
                                     }, undefined),
                                     breeds.map((breed)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -24898,32 +24834,32 @@ const Search = ()=>{
                                             children: breed
                                         }, breed, false, {
                                             fileName: "src/componenets/Search.js",
-                                            lineNumber: 79,
+                                            lineNumber: 80,
                                             columnNumber: 15
                                         }, undefined))
                                 ]
                             }, void 0, true, {
                                 fileName: "src/componenets/Search.js",
-                                lineNumber: 66,
+                                lineNumber: 67,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/componenets/Search.js",
-                        lineNumber: 64,
+                        lineNumber: 65,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         children: "Submit"
                     }, void 0, false, {
                         fileName: "src/componenets/Search.js",
-                        lineNumber: 86,
+                        lineNumber: 87,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/componenets/Search.js",
-                lineNumber: 28,
+                lineNumber: 29,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -24933,22 +24869,26 @@ const Search = ()=>{
                         breed: pet.breed
                     }, pet.id, false, {
                         fileName: "src/componenets/Search.js",
-                        lineNumber: 91,
+                        lineNumber: 92,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/componenets/Search.js",
-                lineNumber: 89,
+                lineNumber: 90,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/componenets/Search.js",
-        lineNumber: 27,
+        lineNumber: 28,
         columnNumber: 5
     }, undefined);
 };
-_s(Search, "a/2Wuxwg3ZN588BBE9S2hfuudjI=");
+_s(Search, "yHJDOw4YBiXl1bJYBy8Cn8h0vE4=", false, function() {
+    return [
+        (0, _useBreedListDefault.default)
+    ];
+});
 _c = Search;
 exports.default = Search;
 var _c;
@@ -24959,6 +24899,114 @@ $RefreshReg$(_c, "Search");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","./Pet":"5G4YW"}]},["1xC6H","7Zeie","2kQhy"], "2kQhy", "parcelRequiref74e")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","./Pet":"5G4YW","../hooks/useBreedList":"q7z2H"}],"5G4YW":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0827 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0827.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+/* Everything can be written in jsx 
+
+import React from "react";
+
+const Pet = props => {
+  return React.createElement("div", {}, [
+    React.createElement("h1", {}, props.name),
+    React.createElement("h2", {}, props.animal),
+    React.createElement("h2", {}, props.breed),
+  ]);
+};
+
+*/ // jsx
+const Pet = (props)=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: props.name
+            }, void 0, false, {
+                fileName: "src/componenets/Pet.js",
+                lineNumber: 19,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: props.animal
+            }, void 0, false, {
+                fileName: "src/componenets/Pet.js",
+                lineNumber: 20,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: props.breed
+            }, void 0, false, {
+                fileName: "src/componenets/Pet.js",
+                lineNumber: 21,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/componenets/Pet.js",
+        lineNumber: 18,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Pet;
+exports.default = Pet;
+var _c;
+$RefreshReg$(_c, "Pet");
+
+  $parcel$ReactRefreshHelpers$0827.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"q7z2H":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b709 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b709.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _s = $RefreshSig$();
+const useBreedList = (animal)=>{
+    _s();
+    const [breedList, setBreedList] = (0, _react.useState)([]);
+    const [status, setStatus] = (0, _react.useState)("Unloaded");
+    (0, _react.useEffect)(()=>{
+        const requestBreedList = async ()=>{
+            setBreedList([]); // ensure empty array to start with
+            setStatus("Loading");
+            const res = await fetch(`http://pets-v2.dev-apis.com/breeds?animal=${animal}`);
+            const data = await res.json();
+            localStorage.setItem(animal, data.breeds); // empty array if no animal exist in db
+            setBreedList(localStorage.getItem(animal).split(","));
+            setStatus("Loaded");
+        };
+        if (!animal) setBreedList([]);
+        else if (localStorage.getItem(animal)) setBreedList(localStorage[animal].split(","));
+        else requestBreedList();
+    }, [
+        animal
+    ]);
+    return [
+        breedList,
+        status
+    ];
+};
+_s(useBreedList, "PIybIjhkyQRdnRz2A+uVB9yrU+o=");
+exports.default = useBreedList;
+
+  $parcel$ReactRefreshHelpers$b709.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","7Zeie","2kQhy"], "2kQhy", "parcelRequiref74e")
 
 //# sourceMappingURL=index.7271efb6.js.map

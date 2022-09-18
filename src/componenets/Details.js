@@ -1,5 +1,6 @@
-import { Component } from "react";
+import { Component, useContext } from "react";
 import { useParams } from "react-router-dom";
+import ThemeContext from "../ThemeContext";
 import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
 
@@ -46,7 +47,17 @@ class Details extends Component {
             {animal[0].toUpperCase() + animal.slice(1)} / {breed} / {city},{" "}
             {state}
           </h2>
-          <button>Adpot {name}</button>
+
+          {/* the hard way to use useContext */}
+          {/* <ThemeContext.Consumer>
+            {([theme]) => (
+              <button style={{ backgroundColor: theme }}>Adopt {name}</button>
+            )}
+          </ThemeContext.Consumer> */}
+          <button style={{ backgroundColor: this.props.theme }}>
+            Adpot {name}
+          </button>
+
           <p>{description}</p>
         </div>
       </div>
@@ -57,9 +68,11 @@ class Details extends Component {
 // only way to get params out of react router is to use useParam; and the only way to use it in class componenet is to wrap it in another component
 const WrappedDetails = () => {
   const params = useParams();
+  const [theme] = useContext(ThemeContext);
+
   return (
     <ErrorBoundary>
-      <Details params={params} />;
+      <Details params={params} theme={theme} />;
     </ErrorBoundary>
   );
 };

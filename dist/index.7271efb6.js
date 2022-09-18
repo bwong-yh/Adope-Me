@@ -26820,34 +26820,125 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
 var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
-const Details = ()=>{
+// class component; cannot use hooks
+class Details extends (0, _react.Component) {
+    constructor(props){
+        // super means give the props to the parent class - Component
+        super(props);
+        this.state = {
+            loading: true
+        };
+        console.log(this.props.params);
+        console.log(this.state);
+    }
+    // life-cycle methods
+    // componentDidMount() runs as soon as first render is done
+    async componentDidMount() {
+        const res = await fetch(`http://pets-v2.dev-apis.com/pets?id=${this.props.params.id}` // see below
+        );
+        const data = await res.json();
+        this.setState({
+            loading: false,
+            ...data.pets[0]
+        });
+    }
+    // must have a render function
+    render() {
+        if (this.state.loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+            children: "Loading ..."
+        }, void 0, false, {
+            fileName: "src/componenets/Details.js",
+            lineNumber: 29,
+            columnNumber: 14
+        }, this);
+        const { name , animal , breed , city , state , description  } = this.state;
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "details",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: name
+                    }, void 0, false, {
+                        fileName: "src/componenets/Details.js",
+                        lineNumber: 37,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        children: [
+                            animal[0].toUpperCase() + animal.slice(1),
+                            " / ",
+                            breed,
+                            " / ",
+                            city,
+                            ",",
+                            " ",
+                            state
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/componenets/Details.js",
+                        lineNumber: 38,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        children: [
+                            "Adpot ",
+                            name
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/componenets/Details.js",
+                        lineNumber: 42,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: description
+                    }, void 0, false, {
+                        fileName: "src/componenets/Details.js",
+                        lineNumber: 43,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/componenets/Details.js",
+                lineNumber: 36,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "src/componenets/Details.js",
+            lineNumber: 35,
+            columnNumber: 7
+        }, this);
+    }
+}
+// only way to get params out of react router is to use useParam; and the only way to use it in class componenet is to wrap it in another component
+const WrappedDetails = ()=>{
     _s();
-    const { id  } = (0, _reactRouterDom.useParams)();
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-        children: id
+    const params = (0, _reactRouterDom.useParams)();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Details, {
+        params: params
     }, void 0, false, {
         fileName: "src/componenets/Details.js",
-        lineNumber: 6,
+        lineNumber: 53,
         columnNumber: 10
     }, undefined);
 };
-_s(Details, "yQgCIz/jJfqV1l9s2yoba81MT5A=", false, function() {
+_s(WrappedDetails, "+jVsTcECDRo3yq2d7EQxlN9Ixog=", false, function() {
     return [
         (0, _reactRouterDom.useParams)
     ];
 });
-_c = Details;
-exports.default = Details;
+_c = WrappedDetails;
+exports.default = WrappedDetails;
 var _c;
-$RefreshReg$(_c, "Details");
+$RefreshReg$(_c, "WrappedDetails");
 
   $parcel$ReactRefreshHelpers$70f0.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"fdOAw"}]},["1xC6H","7Zeie","2kQhy"], "2kQhy", "parcelRequiref74e")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"fdOAw","react":"21dqq","react/jsx-dev-runtime":"iTorj"}]},["1xC6H","7Zeie","2kQhy"], "2kQhy", "parcelRequiref74e")
 
 //# sourceMappingURL=index.7271efb6.js.map

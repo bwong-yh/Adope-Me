@@ -26819,7 +26819,9 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _reactRouterDom = require("react-router-dom"); // class component; cannot use hooks
+var _reactRouterDom = require("react-router-dom");
+var _carousel = require("./Carousel"); // class component; cannot use hooks
+var _carouselDefault = parcelHelpers.interopDefault(_carousel);
 var _s = $RefreshSig$();
 function _defineProperty(obj, key, value) {
     if (key in obj) Object.defineProperty(obj, key, {
@@ -26854,63 +26856,72 @@ class Details extends (0, _react.Component) {
             children: "Loading ..."
         }, void 0, false, {
             fileName: "src/componenets/Details.js",
-            lineNumber: 30,
+            lineNumber: 31,
             columnNumber: 14
         }, this);
-        const { name , animal , breed , city , state , description  } = this.state;
+        const { name , animal , breed , city , state , description , images  } = this.state;
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "details",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        children: name
-                    }, void 0, false, {
-                        fileName: "src/componenets/Details.js",
-                        lineNumber: 43,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                        children: [
-                            animal[0].toUpperCase() + animal.slice(1),
-                            " / ",
-                            breed,
-                            " / ",
-                            city,
-                            ",",
-                            " ",
-                            state
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/componenets/Details.js",
-                        lineNumber: 44,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        children: [
-                            "Adpot ",
-                            name
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/componenets/Details.js",
-                        lineNumber: 48,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: description
-                    }, void 0, false, {
-                        fileName: "src/componenets/Details.js",
-                        lineNumber: 49,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/componenets/Details.js",
-                lineNumber: 42,
-                columnNumber: 9
-            }, this)
-        }, void 0, false, {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _carouselDefault.default), {
+                    images: images
+                }, void 0, false, {
+                    fileName: "src/componenets/Details.js",
+                    lineNumber: 44,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            children: name
+                        }, void 0, false, {
+                            fileName: "src/componenets/Details.js",
+                            lineNumber: 46,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                            children: [
+                                animal[0].toUpperCase() + animal.slice(1),
+                                " / ",
+                                breed,
+                                " / ",
+                                city,
+                                ",",
+                                " ",
+                                state
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/componenets/Details.js",
+                            lineNumber: 47,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            children: [
+                                "Adpot ",
+                                name
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/componenets/Details.js",
+                            lineNumber: 51,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            children: description
+                        }, void 0, false, {
+                            fileName: "src/componenets/Details.js",
+                            lineNumber: 52,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/componenets/Details.js",
+                    lineNumber: 45,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
             fileName: "src/componenets/Details.js",
-            lineNumber: 41,
+            lineNumber: 43,
             columnNumber: 12
         }, this);
     }
@@ -26922,7 +26933,7 @@ const WrappedDetails = ()=>{
         params: params
     }, void 0, false, {
         fileName: "src/componenets/Details.js",
-        lineNumber: 59,
+        lineNumber: 62,
         columnNumber: 10
     }, undefined);
 };
@@ -26941,6 +26952,91 @@ $RefreshReg$(_c, "WrappedDetails");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"fdOAw","react":"21dqq","react/jsx-dev-runtime":"iTorj"}]},["1xC6H","7Zeie","2kQhy"], "2kQhy", "parcelRequiref74e")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"fdOAw","react":"21dqq","react/jsx-dev-runtime":"iTorj","./Carousel":"2PQy1"}],"2PQy1":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$6d84 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$6d84.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+function _defineProperty(obj, key, value) {
+    if (key in obj) Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+    });
+    else obj[key] = value;
+    return obj;
+}
+class Carousel extends (0, _react.Component) {
+    constructor(...args){
+        super(...args);
+        _defineProperty(this, "state", {
+            active: 0
+        });
+        _defineProperty(this, "handleClick", (e)=>{
+            this.setState({
+                active: +e.target.dataset.index
+            }); // + unary plus converts data type into number
+        });
+    }
+    render() {
+        const { active  } = this.state;
+        const { images  } = this.props;
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "carousel",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: images[active],
+                    alt: "animal"
+                }, void 0, false, {
+                    fileName: "src/componenets/Carousel.js",
+                    lineNumber: 28,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "carousel-smaller",
+                    children: images.map((image, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: image,
+                            "data-index": index,
+                            className: index === active ? active : "",
+                            alt: "animal thumbnail",
+                            onClick: this.handleClick
+                        }, image, false, {
+                            fileName: "src/componenets/Carousel.js",
+                            lineNumber: 31,
+                            columnNumber: 9
+                        }, this))
+                }, void 0, false, {
+                    fileName: "src/componenets/Carousel.js",
+                    lineNumber: 29,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/componenets/Carousel.js",
+            lineNumber: 27,
+            columnNumber: 12
+        }, this);
+    }
+}
+_defineProperty(Carousel, "defaultProps", {
+    images: [
+        "http://pet.images.dev-apis.com/pets/none.jpg"
+    ]
+});
+exports.default = Carousel;
+
+  $parcel$ReactRefreshHelpers$6d84.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","7Zeie","2kQhy"], "2kQhy", "parcelRequiref74e")
 
 //# sourceMappingURL=index.7271efb6.js.map

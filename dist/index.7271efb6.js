@@ -2900,33 +2900,56 @@ $parcel$ReactRefreshHelpers$f00f.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactDom = require("react-dom");
 var _pet = require("./componenets/Pet");
 var _petDefault = parcelHelpers.interopDefault(_pet);
-// App() is a render function; it needs to be fast because it re-renders a lot
 const App = ()=>{
-    return /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {}, [
-        /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {
-            id: "brand"
-        }, "Adopt Me!"),
-        /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _petDefault.default), {
-            name: "Kelly",
-            animal: "Dog",
-            breed: "Labrador"
-        }),
-        /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _petDefault.default), {
-            name: "Garfield",
-            animal: "Cat",
-            breed: "Persian Tabby"
-        }),
-        /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _petDefault.default), {
-            name: "Hamtaro",
-            animal: "Hamster",
-            breed: "Golden Hamster"
-        }), 
-    ]);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                id: "brand",
+                children: "Adopt Me!"
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _petDefault.default), {
+                name: "Kelly",
+                animal: "Dog",
+                breed: "Labrador"
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _petDefault.default), {
+                name: "Garfield",
+                animal: "Cat",
+                breed: "Perisan Tabby"
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _petDefault.default), {
+                name: "Hamtaro",
+                animal: "Hamster",
+                breed: "Golden Hamster"
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/App.js",
+        lineNumber: 7,
+        columnNumber: 5
+    }, undefined);
 };
 _c = App;
 // display onto the DOM
@@ -2939,7 +2962,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./componenets/Pet":"5G4YW"}],"21dqq":[function(require,module,exports) {
+},{"react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./componenets/Pet":"5G4YW","react/jsx-dev-runtime":"iTorj"}],"21dqq":[function(require,module,exports) {
 "use strict";
 module.exports = require("./cjs/react.development.js");
 

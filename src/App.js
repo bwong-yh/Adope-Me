@@ -2,26 +2,15 @@ import React from "react";
 import { render } from "react-dom";
 import Pet from "./componenets/Pet";
 
-// App() is a render function; it needs to be fast because it re-renders a lot
 const App = () => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", { id: "brand" }, "Adopt Me!"),
-    React.createElement(Pet, {
-      name: "Kelly",
-      animal: "Dog",
-      breed: "Labrador",
-    }),
-    React.createElement(Pet, {
-      name: "Garfield",
-      animal: "Cat",
-      breed: "Persian Tabby",
-    }),
-    React.createElement(Pet, {
-      name: "Hamtaro",
-      animal: "Hamster",
-      breed: "Golden Hamster",
-    }),
-  ]);
+  return (
+    <div>
+      <h1 id="brand">Adopt Me!</h1>
+      <Pet name="Kelly" animal="Dog" breed="Labrador" />
+      <Pet name="Garfield" animal="Cat" breed="Perisan Tabby" />
+      <Pet name="Hamtaro" animal="Hamster" breed="Golden Hamster" />
+    </div>
+  );
 };
 
 // display onto the DOM

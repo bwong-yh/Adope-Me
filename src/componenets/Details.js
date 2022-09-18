@@ -3,14 +3,15 @@ import { useParams } from "react-router-dom";
 
 // class component; cannot use hooks
 class Details extends Component {
-  constructor(props) {
-    // super means give the props to the parent class - Component
-    super(props);
+  // constructor(props) {
+  //   // super means give the props to the parent class - Component
+  //   super(props);
 
-    this.state = { loading: true };
-    console.log(this.props.params);
-    console.log(this.state);
-  }
+  //   this.state = { loading: true };
+  // }
+
+  // since class properties plugins are implement with babel, the code above can be written as
+  state = { loading: true };
 
   // life-cycle methods
   // componentDidMount() runs as soon as first render is done

@@ -2919,12 +2919,12 @@ const App = ()=>{
                         children: "Adopt Me!"
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 12,
+                        lineNumber: 11,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 11,
+                    lineNumber: 10,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
@@ -2934,7 +2934,7 @@ const App = ()=>{
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _detailsDefault.default), {}, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 16,
+                            lineNumber: 15,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -2942,29 +2942,28 @@ const App = ()=>{
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchDefault.default), {}, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 17,
+                            lineNumber: 16,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/App.js",
-                    lineNumber: 15,
+                    lineNumber: 14,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/App.js",
-            lineNumber: 10,
+            lineNumber: 9,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/App.js",
-        lineNumber: 9,
-        columnNumber: 5
+        lineNumber: 8,
+        columnNumber: 10
     }, undefined);
-};
+}; // display onto the DOM
 _c = App;
-// display onto the DOM
 (0, _reactDom.render)(/*#__PURE__*/ (0, _reactDefault.default).createElement(App), document.getElementById("root"));
 var _c;
 $RefreshReg$(_c, "App");
@@ -24798,13 +24797,13 @@ const Search = ()=>{
                                 placeholder: "Location"
                             }, void 0, false, {
                                 fileName: "src/componenets/Search.js",
-                                lineNumber: 37,
+                                lineNumber: 29,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/componenets/Search.js",
-                        lineNumber: 35,
+                        lineNumber: 27,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -24825,7 +24824,7 @@ const Search = ()=>{
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {}, void 0, false, {
                                         fileName: "src/componenets/Search.js",
-                                        lineNumber: 61,
+                                        lineNumber: 44,
                                         columnNumber: 13
                                     }, undefined),
                                     ANIMALS.map((animal)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -24833,19 +24832,19 @@ const Search = ()=>{
                                             children: animal
                                         }, animal, false, {
                                             fileName: "src/componenets/Search.js",
-                                            lineNumber: 63,
-                                            columnNumber: 15
+                                            lineNumber: 45,
+                                            columnNumber: 36
                                         }, undefined))
                                 ]
                             }, void 0, true, {
                                 fileName: "src/componenets/Search.js",
-                                lineNumber: 48,
+                                lineNumber: 34,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/componenets/Search.js",
-                        lineNumber: 46,
+                        lineNumber: 32,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -24864,7 +24863,7 @@ const Search = ()=>{
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {}, void 0, false, {
                                         fileName: "src/componenets/Search.js",
-                                        lineNumber: 83,
+                                        lineNumber: 61,
                                         columnNumber: 13
                                     }, undefined),
                                     breeds.map((breed)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -24872,46 +24871,46 @@ const Search = ()=>{
                                             children: breed
                                         }, breed, false, {
                                             fileName: "src/componenets/Search.js",
-                                            lineNumber: 85,
-                                            columnNumber: 15
+                                            lineNumber: 62,
+                                            columnNumber: 34
                                         }, undefined))
                                 ]
                             }, void 0, true, {
                                 fileName: "src/componenets/Search.js",
-                                lineNumber: 72,
+                                lineNumber: 53,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/componenets/Search.js",
-                        lineNumber: 70,
+                        lineNumber: 51,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         children: "Submit"
                     }, void 0, false, {
                         fileName: "src/componenets/Search.js",
-                        lineNumber: 92,
+                        lineNumber: 68,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/componenets/Search.js",
-                lineNumber: 29,
+                lineNumber: 23,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resultDefault.default), {
                 pets: pets
             }, void 0, false, {
                 fileName: "src/componenets/Search.js",
-                lineNumber: 95,
+                lineNumber: 71,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/componenets/Search.js",
-        lineNumber: 28,
-        columnNumber: 5
+        lineNumber: 22,
+        columnNumber: 10
     }, undefined);
 };
 _s(Search, "yHJDOw4YBiXl1bJYBy8Cn8h0vE4=", false, function() {
@@ -24992,7 +24991,7 @@ const Result = ({ pets  })=>{
         }, void 0, false, {
             fileName: "src/componenets/Result.js",
             lineNumber: 7,
-            columnNumber: 9
+            columnNumber: 23
         }, undefined) : pets.map((pet)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _petDefault.default), {
                 id: pet.id,
                 name: pet.name,
@@ -25002,13 +25001,13 @@ const Result = ({ pets  })=>{
                 location: `${pet.city}, ${pet.state}`
             }, pet.id, false, {
                 fileName: "src/componenets/Result.js",
-                lineNumber: 10,
-                columnNumber: 11
+                lineNumber: 7,
+                columnNumber: 64
             }, undefined))
     }, void 0, false, {
         fileName: "src/componenets/Result.js",
-        lineNumber: 5,
-        columnNumber: 5
+        lineNumber: 6,
+        columnNumber: 10
     }, undefined);
 };
 _c = Result;
@@ -25035,8 +25034,7 @@ var _reactRouterDom = require("react-router-dom");
 const Pet = ({ id , name , animal , breed , images , location  })=>{
     let hero = "http://pet.images.dev-apis.com/pets/none.jpg";
     if (images.length) hero = images[0];
-    return(// <Link to> is same as <a href> but handles extra logics that relates to react
-    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
         to: `/details/${id}`,
         className: "pet",
         children: [
@@ -25047,12 +25045,12 @@ const Pet = ({ id , name , animal , breed , images , location  })=>{
                     alt: name
                 }, void 0, false, {
                     fileName: "src/componenets/Pet.js",
-                    lineNumber: 14,
+                    lineNumber: 20,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/componenets/Pet.js",
-                lineNumber: 13,
+                lineNumber: 19,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -25062,7 +25060,7 @@ const Pet = ({ id , name , animal , breed , images , location  })=>{
                         children: name
                     }, void 0, false, {
                         fileName: "src/componenets/Pet.js",
-                        lineNumber: 17,
+                        lineNumber: 23,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -25073,28 +25071,28 @@ const Pet = ({ id , name , animal , breed , images , location  })=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/componenets/Pet.js",
-                        lineNumber: 18,
+                        lineNumber: 24,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                         children: location
                     }, void 0, false, {
                         fileName: "src/componenets/Pet.js",
-                        lineNumber: 21,
+                        lineNumber: 27,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/componenets/Pet.js",
-                lineNumber: 16,
+                lineNumber: 22,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/componenets/Pet.js",
-        lineNumber: 12,
+        lineNumber: 18,
         columnNumber: 5
-    }, undefined));
+    }, undefined);
 };
 _c = Pet;
 exports.default = Pet;
@@ -26821,18 +26819,24 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _reactRouterDom = require("react-router-dom");
+var _reactRouterDom = require("react-router-dom"); // class component; cannot use hooks
 var _s = $RefreshSig$();
-// class component; cannot use hooks
+function _defineProperty(obj, key, value) {
+    if (key in obj) Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+    });
+    else obj[key] = value;
+    return obj;
+}
 class Details extends (0, _react.Component) {
-    constructor(props){
-        // super means give the props to the parent class - Component
-        super(props);
-        this.state = {
+    constructor(...args){
+        super(...args);
+        _defineProperty(this, "state", {
             loading: true
-        };
-        console.log(this.props.params);
-        console.log(this.state);
+        });
     }
     // life-cycle methods
     // componentDidMount() runs as soon as first render is done
@@ -26845,13 +26849,12 @@ class Details extends (0, _react.Component) {
             ...data.pets[0]
         });
     }
-    // must have a render function
     render() {
         if (this.state.loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
             children: "Loading ..."
         }, void 0, false, {
             fileName: "src/componenets/Details.js",
-            lineNumber: 29,
+            lineNumber: 30,
             columnNumber: 14
         }, this);
         const { name , animal , breed , city , state , description  } = this.state;
@@ -26863,7 +26866,7 @@ class Details extends (0, _react.Component) {
                         children: name
                     }, void 0, false, {
                         fileName: "src/componenets/Details.js",
-                        lineNumber: 37,
+                        lineNumber: 43,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -26879,7 +26882,7 @@ class Details extends (0, _react.Component) {
                         ]
                     }, void 0, true, {
                         fileName: "src/componenets/Details.js",
-                        lineNumber: 38,
+                        lineNumber: 44,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -26889,30 +26892,29 @@ class Details extends (0, _react.Component) {
                         ]
                     }, void 0, true, {
                         fileName: "src/componenets/Details.js",
-                        lineNumber: 42,
+                        lineNumber: 48,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         children: description
                     }, void 0, false, {
                         fileName: "src/componenets/Details.js",
-                        lineNumber: 43,
+                        lineNumber: 49,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/componenets/Details.js",
-                lineNumber: 36,
+                lineNumber: 42,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "src/componenets/Details.js",
-            lineNumber: 35,
-            columnNumber: 7
+            lineNumber: 41,
+            columnNumber: 12
         }, this);
     }
-}
-// only way to get params out of react router is to use useParam; and the only way to use it in class componenet is to wrap it in another component
+} // only way to get params out of react router is to use useParam; and the only way to use it in class componenet is to wrap it in another component
 const WrappedDetails = ()=>{
     _s();
     const params = (0, _reactRouterDom.useParams)();
@@ -26920,7 +26922,7 @@ const WrappedDetails = ()=>{
         params: params
     }, void 0, false, {
         fileName: "src/componenets/Details.js",
-        lineNumber: 53,
+        lineNumber: 59,
         columnNumber: 10
     }, undefined);
 };

@@ -13,13 +13,26 @@ const Pet = props => {
 */
 
 // jsx
-const Pet = props => {
+const Pet = ({ id, name, animal, breed, images, location }) => {
+  let hero = "http://pet.images.dev-apis.com/pets/none.jpg";
+
+  if (images.length) {
+    hero = images[0];
+  }
+
   return (
-    <div>
-      <h1>{props.name}</h1>
-      <h2>{props.animal}</h2>
-      <h2>{props.breed}</h2>
-    </div>
+    <a href={`/details/${id}`} className="pet">
+      <div className="image-container">
+        <img src={hero} alt={name} />
+      </div>
+      <div className="info">
+        <h1>{name}</h1>
+        <h2>
+          {animal[0].toUpperCase() + animal.slice(1)} / {breed}
+        </h2>
+        <h2>{location}</h2>
+      </div>
+    </a>
   );
 };
 

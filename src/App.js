@@ -1,15 +1,22 @@
 import React, { StrictMode } from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { render } from "react-dom";
 import Search from "./componenets/Search";
+import Details from "./componenets/Details";
 
 const App = () => {
   return (
-    // strict mode simply future-proof the app; makes it less issues when the next version of react comes out by restricting the app the use legacy features of soon to be deprecated features
     <StrictMode>
-      <div>
-        <h1 id="brand">Adopt Me!</h1>
-        <Search />
-      </div>
+      <BrowserRouter>
+        <header>
+          <Link to="/">Adopt Me!</Link>
+        </header>
+
+        <Routes>
+          <Route path="/details/:id" element={<Details />} />
+          <Route path="/" element={<Search />} />
+        </Routes>
+      </BrowserRouter>
     </StrictMode>
   );
 };

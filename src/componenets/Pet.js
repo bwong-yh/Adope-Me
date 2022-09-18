@@ -1,18 +1,5 @@
-/* Everything can be written in jsx 
+import { Link } from "react-router-dom";
 
-import React from "react";
-
-const Pet = props => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, props.name),
-    React.createElement("h2", {}, props.animal),
-    React.createElement("h2", {}, props.breed),
-  ]);
-};
-
-*/
-
-// jsx
 const Pet = ({ id, name, animal, breed, images, location }) => {
   let hero = "http://pet.images.dev-apis.com/pets/none.jpg";
 
@@ -21,7 +8,8 @@ const Pet = ({ id, name, animal, breed, images, location }) => {
   }
 
   return (
-    <a href={`/details/${id}`} className="pet">
+    // <Link to> is same as <a href> but handles extra logics that relates to react
+    <Link to={`/details/${id}`} className="pet">
       <div className="image-container">
         <img src={hero} alt={name} />
       </div>
@@ -32,7 +20,7 @@ const Pet = ({ id, name, animal, breed, images, location }) => {
         </h2>
         <h2>{location}</h2>
       </div>
-    </a>
+    </Link>
   );
 };
 

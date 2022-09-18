@@ -1,5 +1,5 @@
 import React, { StrictMode } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { render } from "react-dom";
 import Search from "./componenets/Search";
 import Details from "./componenets/Details";
@@ -8,7 +8,10 @@ const App = () => {
   return (
     <StrictMode>
       <BrowserRouter>
-        <h1 id="brand">Adopt Me!</h1>
+        <header>
+          <Link to="/">Adopt Me!</Link>
+        </header>
+
         <Routes>
           <Route path="/details/:id" element={<Details />} />
           <Route path="/" element={<Search />} />

@@ -1,13 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-
-const Pet = props => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, props.name),
-    React.createElement("h2", {}, props.animal),
-    React.createElement("h2", {}, props.breed),
-  ]);
-};
+import Pet from "./componenets/Pet";
 
 // App() is a render function; it needs to be fast because it re-renders a lot
 const App = () => {
